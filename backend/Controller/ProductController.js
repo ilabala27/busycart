@@ -1,5 +1,7 @@
 const product = require('../models/productmodel')
 
+// get all products
+
 exports.getProducts = async(req, res, next)=>{
     const products = await product.find();
     res.status(200).json({
@@ -9,6 +11,8 @@ exports.getProducts = async(req, res, next)=>{
     })
 }
 
+// get one product
+
 exports.newProduct = async (req, res, next) =>{
    const productnew =  await product.create(req.body);
    res.status(201).json({
@@ -17,6 +21,8 @@ exports.newProduct = async (req, res, next) =>{
    })
 
 }
+
+//create product
 
 exports.getOneProduct = async(req, res, next)=>{
    const oneProduct = await product.findById(req.params.id);
@@ -33,3 +39,4 @@ exports.getOneProduct = async(req, res, next)=>{
     oneProduct
    })
 }
+
