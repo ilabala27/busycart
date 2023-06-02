@@ -1,0 +1,22 @@
+{
+  "name": "busycart",
+  "version": "1.0.0",
+  "description": "ecommerce mern stack ",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon backend/Server.js",
+    "dev": "set NODE_ENV= development && nodemon backend/Server.js",
+    "prod": "set NODE_ENV= production && nodemon backend/Server.js",
+    "seeder": "node backend/utils/seeder.js "
+  },
+  "author": "ila bala",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
